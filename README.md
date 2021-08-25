@@ -1,6 +1,8 @@
-<h2> patikaOdev Repostory'si. <h2>
-<h5> Bu repostory'de patika üzerinden almış olduğum eğitimlerde tamamladığım ödevler bulunmaktadır. <h5>
-  
-<a href="https://github.com/frattshn/patikaOdevler/blob/main/odev1.sql">Ödev 1</a> <br/><br/>
-<a href="https://github.com/frattshn/patikaOdevler/blob/main/odev2.sql">Ödev 2</a> <br/><br/>
-<a href="https://github.com/frattshn/patikaOdevler/blob/main/odev3.sql">Ödev 3</a> <br/><br/>
+## patikaÖdev Repostory'si.
+#### Bu repostory'de patika üzerinden almış olduğum eğitimlerde tamamladığım ödevler bulunmaktadır.
+[Ödev 1](https://github.com/frattshn/patikaOdevler/blob/main/odev1.sql) <br/><br/>
+[Ödev 2](https://github.com/frattshn/patikaOdevler/blob/main/odev2.sql) <br/><br/>
+[Ödev 3](https://github.com/frattshn/patikaOdevler/blob/main/odev3.sql) <br/><br/>
+[Ödev 4](https://github.com/frattshn/patikaOdevler/blob/main/odev4.sql) <br/><br/>
+
+ 
