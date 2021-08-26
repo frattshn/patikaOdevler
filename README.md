@@ -5,6 +5,7 @@
 [Ödev 3](https://github.com/frattshn/patikaOdevler/blob/main/odev3.sql) <br/><br/>
 [Ödev 4](https://github.com/frattshn/patikaOdevler/blob/main/odev4.sql) <br/><br/>
 [Ödev 5](https://github.com/frattshn/patikaOdevler/blob/main/odev5.sql) <br/><br/>
+[Ödev 6](https://github.com/frattshn/patikaOdevler/blob/main/odev6.sql) <br/><br/>
 
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
