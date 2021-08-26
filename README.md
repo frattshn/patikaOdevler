@@ -8,6 +8,9 @@
 [Ödev 6](https://github.com/frattshn/patikaOdevler/blob/main/odev6.sql) <br/><br/>
 [Ödev 7](https://github.com/frattshn/patikaOdevler/blob/main/odev7.sql) <br/><br/>
 
+#### Bazı önemli SQL komutları
+İki adet sütunu tek sütunda birleştirmek için **CONCAT** kullanılır. <br>
+Örnek sorgu: `SELECT CONCAT(first_name, last_name) AS "İsim ve Soyisim" FROM actor;`
 
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
