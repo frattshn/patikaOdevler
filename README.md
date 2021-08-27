@@ -7,6 +7,8 @@
 [Ödev 5](https://github.com/frattshn/patikaOdevler/blob/main/odev5.sql) <br/><br/>
 [Ödev 6](https://github.com/frattshn/patikaOdevler/blob/main/odev6.sql) <br/><br/>
 [Ödev 7](https://github.com/frattshn/patikaOdevler/blob/main/odev7.sql) <br/><br/>
+[Ödev 8](https://github.com/frattshn/patikaOdevler/blob/main/odev8.sql) <br/><br/>
+
 
 ### Bazı önemli SQL komutları
 İki adet sütunu tek sütunda birleştirmek için **CONCAT** kullanılır. <br>
