@@ -8,9 +8,47 @@
 [Ödev 6](https://github.com/frattshn/patikaOdevler/blob/main/odev6.sql) <br/><br/>
 [Ödev 7](https://github.com/frattshn/patikaOdevler/blob/main/odev7.sql) <br/><br/>
 
-#### Bazı önemli SQL komutları
+### Bazı önemli SQL komutları
 İki adet sütunu tek sütunda birleştirmek için **CONCAT** kullanılır. <br>
-Örnek sorgu: `SELECT CONCAT(first_name, last_name) AS "İsim ve Soyisim" FROM actor;`
+Örnek sorgu: `SELECT CONCAT(first_name, last_name) AS "İsim ve Soyisim" FROM actor;` <br>
+#### Tablo Oluşturma
+`CREATE TABLE <table_name> (` <br>
+`   <column_name> <data_type> <constraint>,` <br>
+`   <column_name> <data_type> <constraint>,` <br>
+`   <column_name> <data_type> <constraint>,` <br>
+`);` <br> <br>
+**ÖRNEK** <br> <br>
+`CREATE TABLE author (` <br>
+`	id SERIAL PRIMARY KEY,` <br>
+`	first_name varchar(50) NOT NULL,` <br>
+`last_name varchar(50) NOT NULL, `<br>
+`	email varchar(100),` <br>
+`	birthday DATE` <br>
+`); ` <br> <br>
+[![image](https://r.resimlink.com/ISDe.png)](https://resimlink.com/ISDe)
+
+#### Tabloya Veri Ekleme
+`INSERT INTO author (first_name, last_name, email, birthday)` <br>
+`VALUES` <br>
+`	('Memduh Fırat', 'Şahin', 'sahinmfirat@gmail.com', '2000-01-15'),` <br>
+` ('Fatih', 'Cöne', 'fatih@cone.com', '2000-11-15'),` <br>
+`	('Berat', 'Balta', 'berat@balta.com', '2000-08-15'),` <br>
+` ('Mert', 'Bulutoğlu', 'mert@bulutoglu.com', '2000-01-15');` <br> <br>
+ [![image](https://r.resimlink.com/mFPR0.png)](https://resimlink.com/mFPR0)
+ 
+ #### Aynı Sütun İsimlerine Sahip Başka Bir Tablo Oluşturma
+ `CREATE TABLE author2 (LIKE author);` <br>
+ 
+ #### Oluşturulan Yeni Tabloya Bir Diğer Tablodan Veri Ekleme
+ `INSERT INTO author2` <br>
+ `SELECT * FROM author;`
+ 
+ #### Verileri ile Beraber Bir Tablodan Başka Bir Tablo Oluşturma
+ `CREATE TABLE author3` <br>
+ `SELECT * FROM author;`
+ 
+ #### Tablo Silme
+ `DROP TABLE IF EXISTS author3;`
 
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
