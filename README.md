@@ -49,6 +49,25 @@
  
  #### Tablo Silme
  `DROP TABLE IF EXISTS author3;`
+ 
+ #### Tabloda Veri Güncelleme
+`UPDATE author` <br>
+`SET first_name ='Zahir Ömer',` <br>
+`	last_name ='Şahin',` <br>
+`	email ='omer@sahin.com',` <br>
+`	birthday ='2022-01-15'` <br>
+`WHERE id =5;` <br>
+
+#### Tabloda Veri Güncelleme ve Veriyi Geri Döndürme
+`UPDATE author` <br>
+`SET last_name ='UPDATED'` <br>
+`WHERE first_name= 'Phebe'` <br>
+`RETURNING *;` <br> <br>
+[![image](https://r.resimlink.com/65w7Go.png)](https://resimlink.com/65w7Go)
+
+#### Veri Silmek
+`DELETE FROM author` <br>
+`WHERE id= 6;` <br>
 
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
