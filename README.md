@@ -71,6 +71,17 @@
 `DELETE FROM author` <br>
 `WHERE id= 6;` <br>
 
+#### PRIMARY KEY ve FOREIGN KEY
+Aşağıdaki SQL komutları ile oluşturulan **book** tablosu, **author** tablosuna author_id ile bağlıdır. Bu tablodaki author_id, author tablosundaki id ile eşleşmiştir.
+```
+CREATE TABLE book(
+ id SERIAL PRIMARY KEY,
+ title VARCHAR(100) NOT NULL,
+ page_number INTEGER NOT NULL,
+ author_id INTEGER REFERENCES author(id)
+);
+```
+
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
 psql -U <kullanıcı adı>
