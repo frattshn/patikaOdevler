@@ -12,64 +12,87 @@
 
 ### Bazı önemli SQL komutları
 İki adet sütunu tek sütunda birleştirmek için **CONCAT** kullanılır. <br>
-Örnek sorgu: `SELECT CONCAT(first_name, last_name) AS "İsim ve Soyisim" FROM actor;` <br>
+Örnek sorgu:
+```
+SELECT CONCAT(first_name, last_name) AS "İsim ve Soyisim" FROM actor; <br>
+```
 #### Tablo Oluşturma
-`CREATE TABLE <table_name> (` <br>
-`   <column_name> <data_type> <constraint>,` <br>
-`   <column_name> <data_type> <constraint>,` <br>
-`   <column_name> <data_type> <constraint>,` <br>
-`);` <br> <br>
+```
+CREATE TABLE <table_name> (
+   <column_name> <data_type> <constraint>,
+   <column_name> <data_type> <constraint>,
+   <column_name> <data_type> <constraint>,
+);
+```
 **ÖRNEK** <br> <br>
-`CREATE TABLE author (` <br>
-`	id SERIAL PRIMARY KEY,` <br>
-`	first_name varchar(50) NOT NULL,` <br>
-`last_name varchar(50) NOT NULL, `<br>
-`	email varchar(100),` <br>
-`	birthday DATE` <br>
-`); ` <br> <br>
+```
+CREATE TABLE author (
+ id SERIAL PRIMARY KEY,
+ first_name varchar(50) NOT NULL,
+ last_name varchar(50) NOT NULL,
+ email varchar(100),
+ birthday DATE
+);
+```
 [![image](https://r.resimlink.com/ISDe.png)](https://resimlink.com/ISDe)
 
 #### Tabloya Veri Ekleme
-`INSERT INTO author (first_name, last_name, email, birthday)` <br>
-`VALUES` <br>
-`	('Memduh Fırat', 'Şahin', 'sahinmfirat@gmail.com', '2000-01-15'),` <br>
-` ('Fatih', 'Cöne', 'fatih@cone.com', '2000-11-15'),` <br>
-`	('Berat', 'Balta', 'berat@balta.com', '2000-08-15'),` <br>
-` ('Mert', 'Bulutoğlu', 'mert@bulutoglu.com', '2000-01-15');` <br> <br>
+```
+INSERT INTO author (first_name, last_name, email, birthday)
+VALUES
+ ('Memduh Fırat', 'Şahin', 'sahinmfirat@gmail.com', '2000-01-15'),
+ ('Fatih', 'Cöne', 'fatih@cone.com', '2000-11-15'),
+ ('Berat', 'Balta', 'berat@balta.com', '2000-08-15'),
+ ('Mert', 'Bulutoğlu', 'mert@bulutoglu.com', '2000-01-15');
+```
  [![image](https://r.resimlink.com/mFPR0.png)](https://resimlink.com/mFPR0)
  
  #### Aynı Sütun İsimlerine Sahip Başka Bir Tablo Oluşturma
- `CREATE TABLE author2 (LIKE author);` <br>
+ ```
+ CREATE TABLE author2 (LIKE author);
+ ```
  
  #### Oluşturulan Yeni Tabloya Bir Diğer Tablodan Veri Ekleme
- `INSERT INTO author2` <br>
- `SELECT * FROM author;`
+ ```
+ INSERT INTO author2
+ SELECT * FROM author;
+ ```
  
  #### Verileri ile Beraber Bir Tablodan Başka Bir Tablo Oluşturma
- `CREATE TABLE author3` <br>
- `SELECT * FROM author;`
+ ```
+ CREATE TABLE author3
+ SELECT * FROM author;
+ ```
  
  #### Tablo Silme
- `DROP TABLE IF EXISTS author3;`
+ ```
+ DROP TABLE IF EXISTS author3;
+ ```
  
  #### Tabloda Veri Güncelleme
-`UPDATE author` <br>
-`SET first_name ='Zahir Ömer',` <br>
-`	last_name ='Şahin',` <br>
-`	email ='omer@sahin.com',` <br>
-`	birthday ='2022-01-15'` <br>
-`WHERE id =5;` <br>
+ ```
+UPDATE author
+SET first_name ='Zahir Ömer',
+	last_name ='Şahin',
+	email ='omer@sahin.com',
+	birthday ='2022-01-15'
+WHERE id =5; <br>
+```
 
 #### Tabloda Veri Güncelleme ve Veriyi Geri Döndürme
-`UPDATE author` <br>
-`SET last_name ='UPDATED'` <br>
-`WHERE first_name= 'Phebe'` <br>
-`RETURNING *;` <br> <br>
+```
+UPDATE author
+SET last_name ='UPDATED'
+WHERE first_name= 'Phebe'
+RETURNING *;
+```
 [![image](https://r.resimlink.com/65w7Go.png)](https://resimlink.com/65w7Go)
 
 #### Veri Silmek
-`DELETE FROM author` <br>
-`WHERE id= 6;` <br>
+```
+DELETE FROM author
+WHERE id= 6;
+```
 
 #### PRIMARY KEY ve FOREIGN KEY
 Aşağıdaki SQL komutları ile oluşturulan **book** tablosu, **author** tablosuna author_id ile bağlıdır. Bu tablodaki author_id, author tablosundaki id ile eşleşmiştir.
