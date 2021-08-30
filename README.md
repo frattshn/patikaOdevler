@@ -132,14 +132,34 @@ SET NOT NULL;
 #### PSQL ile PostgreSQL'e bağlanmak
 psql -U <kullanıcı adı>
 
+#### PSQL ile PostgreSQL'e host, port, kullanıcı adı ve veritabanı ismi ile bağlanmak için:
+```
+psql -h <host_name> -p <port_name> -U <kullanici_adi> <veritabanı_adi>
+```
+
+#### Yeni veritabanı oluşturmak
+```
+CREATE DATABASE <database_name>
+```
+
 #### Bulunan veritabanlarını listelemek
-\l veya \list
+`\l` veya `\list`
 
 #### Veritabanına bağlantıyı sağlamak
-\connect dvdrental veya \c dvdrental
+`\connect dvdrental` veya `\c dvdrental`
 
 #### Bağlanılan veritabanında bulunan tabloları listelemek ve o tabloya ait detayları görüntülemek
-\dt ile tablolar listelenir. \dt <tablo_adı> ile de tablo detayları görüntülenir.
+`\dt` ile tablolar listelenir. `\dt+ <tablo_adi>` ve `\dt <tablo_adı>` ile de tablo detayları görüntülenir.
+
+#### Bir tablodaki sütun ismini değiştirme
+```
+ALTER TABLE <tablo_adi> RENAME COLUMN <sütun_adi> TO <yeni_sütun_adi>;
+```
+
+#### Bir sütuna UNIQUE kısıtı eklemek
+```
+ALTER TABLE <tablo_adi> ADD CONSTRAINT <kisitlama_adi> UNIQUE(<sütun_adi>);
+```
 
 #### PSQL terminal ekranından çıkmak için \q kullanılır.
  
