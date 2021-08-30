@@ -105,6 +105,29 @@ CREATE TABLE book(
 );
 ```
 
+#### NOT NULL ve ALTER
+Önceden oluşturduğumuz tabloda, herhangi bir sütuna kısıt eklemek istediğimiz zaman **ALTER** komutunu kullanırız. Bu örnekte **NOT NULL** kısıtı bulunmayan bir tablonun sütununa bu kısıtı ekleyeceğiz.
+```
+CREATE TABLE Employees (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    age INTEGER
+);
+```
+Görüldüğü üzere oluşturulan tabloda herhangi bir **NOT NULL** kısıtı bulunmamaktadır. Bu tabloya [null] bir veri ekledikten sonra **NOT NULL** kısıtı eklemek istersek bir hata alırız. Çünkü kısıtı eklemeden önce tablonun sütununda herhangi bir [null] değeri olmaması gerekir. Bu durumda aşağıdaki komutla boş veriye sahip sütunun satırını sileriz:
+```
+DELETE FROM <tablo adı>
+WHERE username IS NULL;
+```
+*Dipnot: Bu örnekte "username" niteliği NULL tipindedir.* <br>
+Söz konusu NULL tipine sahip satırı sildikten sonra aşağıdaki **ALTER** kodu ile tablomuzdaki bir özniteliğe(bu örnekte username) **NOT NULL** kısıtı ekleyebiliriz.
+```
+ALTER TABLE <tablo adı>
+ALTER COLUMN <sütun adı>
+SET NOT NULL;
+```
+
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
 psql -U <kullanıcı adı>
