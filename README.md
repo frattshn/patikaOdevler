@@ -12,10 +12,10 @@
 
 
 ### Bazı önemli SQL komutları
-İki adet sütunu tek sütunda birleştirmek için **CONCAT** kullanılır. <br>
+İki adet sütunu tek sütunda birleştirmek için **CONCAT** kullanılır.
 Örnek sorgu:
 ```
-SELECT CONCAT(first_name, last_name) AS "İsim ve Soyisim" FROM actor; <br>
+SELECT CONCAT(first_name, last_name) AS "İsim ve Soyisim" FROM actor;
 ```
 #### Tablo Oluşturma
 ```
@@ -25,7 +25,7 @@ CREATE TABLE <table_name> (
    <column_name> <data_type> <constraint>,
 );
 ```
-**ÖRNEK** <br> <br>
+**ÖRNEK** <br>
 ```
 CREATE TABLE author (
  id SERIAL PRIMARY KEY,
@@ -140,6 +140,20 @@ Bu örnekte kullanılan INNER JOIN:
 ```
 SELECT * FROM book
 INNER JOIN author ON author.id= book.author_id;
+```
+#### LEFT JOIN
+Kullanım şekli:
+```
+SELECT <sütun_adi1>, <sütun_adi2>, ... , <sütun_adiN>
+FROM <tablo_adi1>
+INNER JOIN <tablo_adi2> ON <tablo1_adi>.<sütun_adi> = <tablo2_adi>.<sütun_adi>;
+```
+***LEFT JOIN**'de **FROM**'dan sonra yazılacak olan tablo ismine dikkat edilmelidir. Sırası önemlidir.*
+
+Bu örnekte kullanılan LEFT JOIN:
+```
+SELECT book.title, author.first_name, author.last_name FROM book
+LEFT JOIN author ON author.id = book.author_id;
 ```
 
 ### PSQL
