@@ -128,6 +128,19 @@ ALTER COLUMN <sütun adı>
 SET NOT NULL;
 ```
 
+#### INNER JOIN
+Kullanım şekli:
+```
+SELECT <sütun_adi1> , <sütun_adi2>, ... , <sütun_adiN>
+FROM <tablo1_adi>
+INNER JOIN <tablo_adi2> ON <tablo1_adi>.<sütun_adi> = <tablo2_adi>.<sütun_adi>;
+```
+Bu örnekte kullanılan INNER JOIN:
+```
+SELECT * FROM book
+INNER JOIN author ON author.id= book.author_id;
+```
+
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
 psql -U <kullanıcı adı>
