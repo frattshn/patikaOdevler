@@ -9,6 +9,7 @@
 [Ödev 7](https://github.com/frattshn/patikaOdevler/blob/main/odev7.sql) <br/><br/>
 [Ödev 8](https://github.com/frattshn/patikaOdevler/blob/main/odev8.sql) <br/><br/>
 [Ödev 9](https://github.com/frattshn/patikaOdevler/blob/main/odev9.sql) <br/><br/>
+[Ödev 10](https://github.com/frattshn/patikaOdevler/blob/main/odev10.sql) <br/><br/>
 
 
 ### Bazı önemli SQL komutları
