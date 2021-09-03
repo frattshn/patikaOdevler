@@ -157,6 +157,15 @@ SELECT book.title, author.first_name, author.last_name FROM book
 LEFT JOIN author ON author.id = book.author_id;
 ```
 
+#### UNION ve UNION ALL
+Bu SQL komutu iki farklı sorgunun birleştirilmesini sağlar. Dikkat edilmesi gereken noktalar vardır. Bunlardan ilki her iki sorguda da kullanılan **sütun sayısı** aynı olmalıdır. Ayrıca birbirine denk gelen sütunlar, **aynı veri tipinde** olmak zorundadırlar. **UNION** komutu her iki sorgudan eşsiz verileri gösterirken, **UNION ALL** komutu veriler aynı olsa dahi bize verileri gösterir.
+**UNION ve UNION ALL'ın Sözdizimi:**
+```
+SELECT <sütun_adlari> FROM <tablo_ismi>
+UNION / UNION ALL
+SELECT <sütun_adlari> FROM <tablo_ismi2>;
+```
+
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
 psql -U <kullanıcı adı>
