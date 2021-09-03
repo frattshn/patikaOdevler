@@ -175,6 +175,20 @@ INTERSECT / EXCEPT
 SELECT <sütun_adlari> FROM <tablo_adi2>;
 ```
 _Dipnot: Her iki sorguda da UNION sorgularında olduğu gibi eşit sayıda sütun adı ve aynı tipte veri taşıyan sütunlar olmalıdır._
+
+#### ALT SORGU
+**Örnek:**
+```
+SELECT title, page_number, (SELECT MAX(page_number) FROM book), ((SELECT MAX(page_number) FROM book)- page_number) AS differ
+FROM book
+WHERE page_number>(
+	SELECT page_number FROM book
+	WHERE title= 'Gülün Adı'
+);
+```
+
+
+
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
 psql -U <kullanıcı adı>
