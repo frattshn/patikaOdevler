@@ -166,6 +166,14 @@ UNION / UNION ALL
 SELECT <sütun_adlari> FROM <tablo_ismi2>;
 ```
 
+#### INTERSECT ve EXCEPT
+**INTERSECT** SQL komutu ilk sorgu ile ikinci sorgunun kesişim kümesini ifade eder. **EXCEPT** SQL komutu ise; yapılan ilk sorguda olup, ikinci sorguda olmayan ifadeleri temsil eder. Kümeler ile ifade etmek istersek; İlk sorgu 'A' ve ikinci sorgumuz 'B' olmak üzere, AUB INTERSECT, A\B ise EXCEPT olarak anlatılabilir. Aşağıda bu iki sorgunun sözdizimi bulunmaktadır:
+```
+SELECT <sütun_adlari> FROM <tablo_adi>
+INTERSECT / EXCEPT
+SELECT <sütun_adlari> FROM <tablo_adi2>;
+```
+_Dipnot: Her iki sorguda da UNION sorgularında olduğu gibi eşit sayıda sütun adı ve aynı tipte veri taşıyan sütunlar olmalıdır._
 ### PSQL
 #### PSQL ile PostgreSQL'e bağlanmak
 psql -U <kullanıcı adı>
