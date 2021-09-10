@@ -11,6 +11,8 @@
 [Ödev 9](https://github.com/frattshn/patikaOdevler/blob/main/odev9.sql) <br/><br/>
 [Ödev 10](https://github.com/frattshn/patikaOdevler/blob/main/odev10.sql) <br/><br/>
 [Ödev 11](https://github.com/frattshn/patikaOdevler/blob/main/odev11.sql) <br/><br/>
+[Ödev 12](https://github.com/frattshn/patikaOdevler/blob/main/odev12.sql) <br/><br/>
+
 
 
 ### Bazı önemli SQL komutları
