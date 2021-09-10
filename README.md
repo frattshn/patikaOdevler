@@ -189,6 +189,18 @@ WHERE page_number>(
 );
 ```
 
+#### Subquery ve JOIN
+Film uzunluğun en fazla olan filmlerin isimlerini, uzunluğunu, actor isim ve soyismiyle beraber yazdıran SQL sorgusu:
+```
+SELECT actor.first_name, actor.last_name, film.title, film.length
+FROM actor
+JOIN film_actor ON film_actor.actor_id= actor.actor_id
+JOIN film ON film.film_id= film_actor.film_id
+WHERE film.length=(
+	SELECT MAX(length) FROM film
+);
+```
+_Not: Bu sorguda iki değil üç adet tablo birbiriyle bağlanmıştır._
 
 
 ### PSQL
